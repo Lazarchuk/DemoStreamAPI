@@ -25,6 +25,9 @@ public class OddTest {
         // Sum of even numbers
         Integer sumEvenStream = Arrays.stream(numbers).filter(num -> num%2==0).reduce((n1, n2) -> n1+n2).orElse(0);
         System.out.println(sumEvenStream);
+
+        // Print the reminder of the division by 2
+        Arrays.stream(numbers).forEach(n -> System.out.print(n%2));
     }
 
 }
