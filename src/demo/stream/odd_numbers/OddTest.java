@@ -14,11 +14,17 @@ public class OddTest {
         System.out.println(sumOdd);
 
         // Stream API
-        Integer sumStream = Arrays.stream(numbers).filter(num -> num%2!=0).reduce((s1, s2) -> s1+s2).orElse(0);
-        System.out.println(sumStream);
+        // Sum of all odd numbers
+        Integer sumOddStream = Arrays.stream(numbers).filter(num -> num%2!=0).reduce((s1, s2) -> s1+s2).orElse(0);
+        System.out.println(sumOddStream);
 
+        // Sum of all numbers
         Integer sum = Arrays.stream(numbers).reduce((s1, s2) -> s1+s2).orElse(0);
         System.out.println(sum);
+
+        // Sum of even numbers
+        Integer sumEvenStream = Arrays.stream(numbers).filter(num -> num%2==0).reduce((n1, n2) -> n1+n2).orElse(0);
+        System.out.println(sumEvenStream);
     }
 
 }

@@ -50,5 +50,7 @@ public class TerminalTest {
 
         // reduce() - позволяет выполнить агрегатные функции над всей коллекцией и возвращает один результат
         System.out.println("Reduce. " +Arrays.stream(numbers1).reduce((s1, s2) -> s1+s2).get());
+
+
     }
 }
