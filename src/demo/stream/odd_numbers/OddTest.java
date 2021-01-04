@@ -1,6 +1,7 @@
 package demo.stream.odd_numbers;
 
 import java.util.Arrays;
+import java.util.stream.Collectors;
 
 public class OddTest {
     public static void main(String[] args) {
@@ -28,6 +29,10 @@ public class OddTest {
 
         // Print the reminder of the division by 2
         Arrays.stream(numbers).forEach(n -> System.out.print(n%2));
+        System.out.println();
+
+        // Choose element with specific index
+        System.out.println(Arrays.stream(numbers).filter(num -> num==numbers[3]).findFirst().orElseGet(() -> 0));
     }
 
 }
